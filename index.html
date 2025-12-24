@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tư Vấn Chăn Nuôi Gà Thực Tế - Chuyên Gia Nguyễn Thị Nhã Linh</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Quicksand', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #15803d 100%); }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .expert-card { background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); }
+        .pulse-animation { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .fade-in { animation: fadeIn 0.6s ease-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #22c55e;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .section-divider { background: linear-gradient(90deg, transparent, #22c55e, transparent); height: 2px; }
+        .calculator-input:focus { border-color: #22c55e; box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2); }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <span class="text-4xl">🐔</span>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-bold">Tư Vấn Chăn Nuôi Gà</h1>
+                    <p class="text-green-100 text-sm">Chuyên Gia Nguyễn Thị Nhã Linh</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex gap-6">
+                <a href="#expert" class="nav-link hover:text-green-200 transition">Giới Thiệu</a>
+                <a href="#giong" class="nav-link hover:text-green-200 transition">Chọn Giống</a>
+                <a href="#chuong" class="nav-link hover:text-green-200 transition">Chuồng Trại</a>
+                <a href="#thucan" class="nav-link hover:text-green-200 transition">Thức Ăn</a>
+                <a href="#phongbenh" class="nav-link hover:text-green-200 transition">Phòng Bệnh</a>
+                <a href="#loi" class="nav-link hover:text-green-200 transition">Lỗi Gặp Phải</a>
+                <a href="#tinh" class="nav-link hover:text-green-200 transition">Tính Toán</a>
+            </nav>
+            <button onclick="toggleMobileMenu()" class="md:hidden text-2xl">☰</button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-green-700 px-4 py-3">
+            <div class="flex flex-col gap-2">
+                <a href="#expert" class="py-2 border-b border-green-600">Giới Thiệu</a>
+                <a href="#giong" class="py-2 border-b border-green-600">Chọn Giống</a>
+                <a href="#chuong" class="py-2 border-b border-green-600">Chuồng Trại</a>
+                <a href="#thucan" class="py-2 border-b border-green-600">Thức Ăn</a>
+                <a href="#phongbenh" class="py-2 border-b border-green-600">Phòng Bệnh</a>
+                <a href="#loi" class="py-2 border-b border-green-600">Lỗi Gặp Phải</a>
+                <a href="#tinh" class="py-2">Tính Toán</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-green-600 via-green-500 to-emerald-400 text-white py-16 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="text-7xl mb-6 pulse-animation">🐣🐔🐓</div>
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">Tư Vấn Chăn Nuôi Gà Thực Tế</h1>
+            <p class="text-xl md:text-2xl opacity-90 mb-6">Kinh Nghiệm 8 Năm - Giải Pháp Hiệu Quả - Lợi Nhuận Bền Vững</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#tinh" class="bg-white text-green-600 px-8 py-3 rounded-full font-bold hover:bg-green-100 transition-all shadow-lg">
+                    💰 Tính Toán Chi Phí
+                </a>
+                <a href="#expert" class="border-2 border-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-green-600 transition-all">
+                    👩‍🌾 Về Chuyên Gia
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Profile Section -->
+    <section id="expert" class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="expert-card rounded-3xl p-8 shadow-xl border border-green-200">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="relative">
+                        <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-green-500 shadow-xl">
+                            <img src="https://lh3.google.com/u/0/d/13Gm5a7l5fOBlN_CAomejqHcrtf3_hcn0=w500-h500" 
+                                 alt="Chuyên Gia Nguyễn Thị Nhã Linh" 
+                                 class="w-full h-full object-cover"
+                                 onerror="this.src='https://ui-avatars.com/api/?name=Nguyen+Thi+Nha+Linh&size=200&background=22c55e&color=fff'">
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            8 Năm KN
+                        </div>
+                    </div>
+                    <div class="flex-1 text-center md:text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Nguyễn Thị Nhã Linh</h2>
+                        <p class="text-green-600 font-semibold text-xl mb-4">🌟 Chuyên Gia Chăn Nuôi Gà - Quản Lý</p>
+                        <div class="grid md:grid-cols-2 gap-4 text-gray-700">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl">📧</span>
+                                <span>ngthinhalinh2009@gmail.com</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl">📍</span>
+                                <span>Phường II, T.X Ngã Năm, TP. Cần Thơ</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl">⏰</span>
+                                <span>8 năm kinh nghiệm thực tế</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl">🏢</span>
+                                <span>Chức vụ: Quản lý chăn nuôi</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 flex flex-wrap justify-center md:justify-start gap-3">
+                            <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium">🐔 Gà Thịt</span>
+                            <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">🥚 Gà Đẻ</span>
+                            <span class="bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-sm font-medium">🌿 Gà Thả Vườn</span>
+                            <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium">💉 Phòng Bệnh</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 p-6 bg-white rounded-2xl border border-green-200">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">💬 Lời nói đầu</h3>
+                    <p class="text-gray-600 leading-relaxed italic">
+                        "Chào các bà con! Với 8 năm kinh nghiệm trong lĩnh vực chăn nuôi gà tại Việt Nam, mình đã trải qua 
+                        nhiều thành công và cả thất bại. Trang web này là nơi mình chia sẻ những kiến thức thực tế nhất, 
+                        giúp bà con tránh được những lỗi phổ biến và đạt được hiệu quả chăn nuôi cao nhất. Mọi thắc mắc 
+                        xin liên hệ email, mình luôn sẵn sàng hỗ trợ!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- Chọn Giống Gà Section -->
+    <section id="giong" class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-5xl">🐣</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-4">Chọn Giống Gà Theo Mục Đích</h2>
+                <p class="text-gray-600 mt-2">Lựa chọn giống phù hợp là yếu tố quyết định 50% thành công</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Gà Thịt -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover transition-all duration-300 border-2 border-red-200">
+                    <div class="bg-red-500 text-white p-4 text-center">
+                        <span class="text-4xl">🍗</span>
+                        <h3 class="text-xl font-bold mt-2">Gà Thịt</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="space-y-3 text-gray-700">
+                            <div class="flex justify-between border-b pb-2">
+                                <span>Giống phổ biến:</span>
+                                <span class="font-semibold">Gà CP, Gà Hubbard, Gà Ross</span>
+                            </div>
+                            <div class="flex justify-between border-b pb-2">
+                                <span>Thời gian nuôi:</span>
+                                <span class="font-semibold text-red-600">6-8 tuần</span>
+                            </div>
+                            <div class="flex justify-between border-b pb-2">
+                                <span>Trọng lượng xuất:</span>
+                                <span class="font-semibold">2.0 - 2.5 kg/con</span>
+                            </div>
+                            <div class="flex justify-between border-b pb-2">
+                                <span>Tỷ lệ thịt:</span>
+                                <span class="font-semibold">70-75%</span>
+                            </div>
+                            <div class="flex justify-between border-b pb-2">
+                                <span>TI ăn/kg tăng:</span>
+                                <span class="font-semibold">1.8 - 2.0 kg</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Giá con giống:</span>
+                                <span class="font-semibold">8.000 - 12.000đ/con</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-red-50 rounded-lg">
+                            <p class="text-sm text-red-700">💡 <strong>Khuyên dùng:</strong> Gà CP cho người mới bắt đầu - dễ nuôi, bệnh ít</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gà Thả Vườn -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover transition-all duration-300 border-2 border-amber-200">
+                    <div class="bg-amber-500 text-white p-4 text-center">
+                        <span class="text-4xl">🌿</span>
+                        <h3 class="text-xl font-bold mt-2">Gà Thả Vườn</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="space-y-3 text-gray-700">
+                            <div class="flex justify-between border-b pb-2">
+                                <span>Giống phổ biến:</span>
+                                <span class="font-semibold">Gà Ri, Gà Tàu Vàng, Gà Lai</span>
+                            </div>
+                            <div class="flex justify-between border-b pb-2">
+                                <span>Thời gian nuôi:</span>
+                                <span class="font-semibold text-amber-600">3-4 tháng</span>
+                            </div>
+                            <div class="flex justify-between border-b pb-2">
+                                <span>Trọng lượng xuất:</span>
+                                <span class="font-semibold">1.5 - 2.0 kg/con</span>
+                            </div>
+                            <div class="flex justify-between border-b pb-2">
+                                <span>Giá bán:</span>
+                                <span class="font-semibold text-green-600">80.000 - 120.000đ/kg</span>
+                            </div>
+                            <div class="flex justify-between border-b pb-2">
+                                <span>TI ăn/kg tăng:</span>
+                                <span class="font-semibold">2.5 - 3.0 kg</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Đặc điểm:</span>
+                                <span class="font-semibold">Thịt dai, thơm</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-amber-50 rounded-lg">
+                            <p class="text-sm text-amber-700">💡 <strong>Khuyên dùng:</strong> Gà Tàu Vàng - dễ nuôi, đề kháng cao, giá tốt</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gà Đẻ -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover transition-all duration-300 border-2 border-blue-200">
+                    <div class="bg-blue-500 text-white p-4 text-center">
+                        <span class="text-4xl">🥚</span>
+                        <h3 class="text-xl font-bold mt-2">Gà Đẻ Lấy Trứng</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="space-y-3 text-gray-700">
+                            <div class="flex justify-between border-b pb-2">
+                                <span>Giống phổ biến:</span>
+                                <span class="font-semibold">ISA Brown, Hy-Line, Lohmann</span>
+                            </div>
+                            <div class="flex justify-between border-b pb-2">
+                                <span>Bắt đầu đẻ:</span>
+                                <span class="font-semibold text-blue-600">18-20 tuần tuổi</span>
+                            </div>
+                            <div class="flex justify-between border-b pb-2">
+                                <span>Số trứng/năm:</span>
+                                <span class="font-semibold">280 - 320 quả</span>
+                            </div>
+                            <div class="flex justify-between border-b pb-2">
+                                <span>Trọng lượng trứng:</span>
+                                <span class="font-semibold">60 - 65g/quả</span>
+                            </div>
+                            <div class="flex justify-between border-b pb-2">
+                                <span>TI ăn/trứng:</span>
+                                <span class="font-semibold">120 - 130g</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Nuôi dài hạn:</span>
+                                <span class="font-semibold">12-18 tháng</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 p-3 bg-blue-50 rounded-lg">
+                            <p class="text-sm text-blue-700">💡 <strong>Khuyên dùng:</strong> ISA Brown - năng suất cao, dễ quản lý</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chuồng Trại Section -->
+    <section id="chuong" class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-5xl">🏠</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-4">Chuồng Trại & Diện Tích</h2>
+                <p class="text-gray-600 mt-2">Chuồng chuẩn giúp gà phát triển tốt, giảm bệnh tật</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Bảng diện tích -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 shadow-lg border border-green-200">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                        <span>📏</span> Bảng Diện Tích Chuẩn
+                    </h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr class="bg-green-600 text-white">
+                                    <th class="p-3 rounded-tl-lg">Loại Gà</th>
+                                    <th class="p-3">Độ Tuổi</th>
+                                    <th class="p-3 rounded-tr-lg">Diện Tích</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-700">
+                                <tr class="border-b bg-white">
+                                    <td class="p-3 font-semibold">Gà thịt</td>
+                                    <td class="p-3">1-7 ngày</td>
+                                    <td class="p-3 text-green-600 font-bold">30-40 con/m²</td>
+                                </tr>
+                                <tr class="border-b bg-green-50">
+                                    <td class="p-3 font-semibold">Gà thịt</td>
+                                    <td class="p-3">2-4 tuần</td>
+                                    <td class="p-3 text-green-600 font-bold">15-20 con/m²</td>
+                                </tr>
+                                <tr class="border-b bg-white">
+                                    <td class="p-3 font-semibold">Gà thịt</td>
+                                    <td class="p-3">5-8 tuần</td>
+                                    <td class="p-3 text-green-600 font-bold">8-12 con/m²</td>
+                                </tr>
+                                <tr class="border-b bg-green-50">
+                                    <td class="p-3 font-semibold">Gà đẻ</td>
+                                    <td class="p-3">Trưởng thành</td>
+                                    <td class="p-3 text-blue-600 font-bold">5-6 con/m²</td>
+                                </tr>
+                                <tr class="border-b bg-white">
+                                    <td class="p-3 font-semibold">Gà thả vườn</td>
+                                    <td class="p-3">Tất cả</td>
+                                    <td class="p-3 text-amber-600 font-bold">3-5 con/m²</td>
+                                </tr>
+                                <tr class="bg-green-50">
+                                    <td class="p-3 font-semibold">Gà giống</td>
+                                    <td class="p-3">0-7 ngày</td>
+                                    <td class="p-3 text-purple-600 font-bold">50-60 con/m²</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Yêu cầu chuồng -->
+                <div class="space-y-4">
+                    <div class="bg-amber-50 rounded-xl p-5 border border-amber-200">
+                        <h4 class="font-bold text-amber-800 text-lg mb-3">🌡️ Nhiệt Độ Chuồng</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>• Gà con 0-7 ngày: <strong>32-35°C</strong></li>
+                            <li>• Giảm 2-3°C mỗi tuần</li>
+                            <li>• Gà trưởng thành: <strong>20-25°C</strong></li>
+                            <li>• Tránh biến đổi nhiệt độ > 5°C/ngày</li>
+                        </ul>
+                    </div>
+                    <div class="bg-blue-50 rounded-xl p-5 border border-blue-200">
+                        <h4 class="font-bold text-blue-800 text-lg mb-3">💧 Độ Ẩm & Thông Gió</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>• Độ ẩm lý tưởng: <strong>60-70%</strong></li>
+                            <li>• Có cửa sổ thông gió tự nhiên</li>
+                            <li>• Tránh gió lùa trực tiếp vào gà</li>
+                            <li>• Có quạt thông gió công nghiệp (nếu nuôi lớn)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-50 rounded-xl p-5 border border-green-200">
+                        <h4 class="font-bold text-green-800 text-lg mb-3">💡 Ánh Sáng</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>• Gà con: 24 giờ ánh sáng (tuần đầu)</li>
+                            <li>• Gà thịt: 16-18 giờ/ngày</li>
+                            <li>• Gà đẻ: <strong>14-16 giờ/ngày</strong> (quan trọng!)</li>
+                            <li>• Cường độ: 2-4 W/m²</li>
+                        </ul>
+                    </div>
+                    <div class="bg-purple-50 rounded-xl p-5 border border-purple-200">
+                        <h4 class="font-bold text-purple-800 text-lg mb-3">🛏️ Đệm Lót Chuồng</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>• Vật liệu: Trấu, mùn cưa, rơm rạ</li>
+                            <li>• Độ dày: <strong>5-10cm</strong></li>
+                            <li>• Thay mới: <strong>2-3 tuần/lần</strong></li>
+                            <li>• Giữ độ ẩm đệm lót < 25%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thức Ăn Section -->
+    <section id="thucan" class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-5xl">🍽️</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-4">Thức Ăn & Dinh Dưỡng</h2>
+                <p class="text-gray-600 mt-2">Chi phí thức ăn chiếm 65-70% tổng chi phí nuôi gà</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Bảng dinh dưỡng -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-r from-orange-500 to-amber-500 text-white p-4">
+                        <h3 class="text-xl font-bold text-center">📊 Yêu Cầu Dinh Dưỡng Theo Giai Đoạn</h3>
+                    </div>
+                    <div class="p-6">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="bg-orange-100">
+                                    <th class="p-2 text-left">Giai Đoạn</th>
+                                    <th class="p-2">Protein %</th>
+                                    <th class="p-2">Energy Kcal/kg</th>
+                                    <th class="p-2">Canxi %</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-700">
+                                <tr class="border-b">
+                                    <td class="p-2 font-semibold">Gà con (0-4 tuần)</td>
+                                    <td class="p-2 text-center text-red-600 font-bold">20-22</td>
+                                    <td class="p-2 text-center">2800-3000</td>
+                                    <td class="p-2 text-center">0.9-1.0</td>
+                                </tr>
+                                <tr class="border-b bg-orange-50">
+                                    <td class="p-2 font-semibold">Gà lớn (5-8 tuần)</td>
+                                    <td class="p-2 text-center text-orange-600 font-bold">18-20</td>
+                                    <td class="p-2 text-center">2900-3100</td>
+                                    <td class="p-2 text-center">0.8-0.9</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-2 font-semibold">Gà đẻ</td>
+                                    <td class="p-2 text-center text-blue-600 font-bold">16-18</td>
+                                    <td class="p-2 text-center">2700-2900</td>
+                                    <td class="p-2 text-center text-red-600 font-bold">3.0-3.5</td>
+                                </tr>
+                                <tr class="bg-orange-50">
+                                    <td class="p-2 font-semibold">Gà thả vườn</td>
+                                    <td class="p-2 text-center text-green-600 font-bold">15-17</td>
+                                    <td class="p-2 text-center">2700-2850</td>
+                                    <td class="p-2 text-center">0.8-1.0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Lịch cho ăn -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 shadow-lg border border-green-200">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                        <span>⏰</span> Lịch Cho Ăn Chuẩn
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow">
+                            <div class="text-3xl">🌅</div>
+                            <div>
+                                <div class="font-bold text-gray-800">Sáng (6:00 - 7:00)</div>
+                                <div class="text-gray-600">30% tổng khẩu phần ngày</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow">
+                            <div class="text-3xl">☀️</div>
+                            <div>
+                                <div class="font-bold text-gray-800">Trưa (11:00 - 12:00)</div>
+                                <div class="text-gray-600">30% tổng khẩu phần ngày</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow">
+                            <div class="text-3xl">🌤️</div>
+                            <div>
+                                <div class="font-bold text-gray-800">Chiều (16:00 - 17:00)</div>
+                                <div class="text-gray-600">40% tổng khẩu phần ngày</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 p-4 bg-yellow-50 border border-yellow-300 rounded-xl">
+                        <h4 class="font-bold text-yellow-800 mb-2">⚠️ Lưu Ý Quan Trọng</h4>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>• Nước uống luôn sạch, thay 2-3 lần/ngày</li>
+                            <li>• Không cho ăn thức ăn mốc, thiu</li>
+                            <li>• Bổ sung rau xanh: 10-15% khẩu phần</li>
+                            <li>• Gà đẻ cần bổ sung vỏ trứng, vỏ sò (canxi)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Công thức thức ăn tự pha -->
+            <div class="mt-8 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-2xl p-6 text-white">
+                <h3 class="text-2xl font-bold mb-6 text-center">🧮 Công Thức Thức Ăn Tự Pha (100kg)</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-white/20 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-3xl mb-2">🌾</div>
+                        <div class="font-bold text-lg">Ngô (bột)</div>
+                        <div class="text-2xl font-bold">45-50 kg</div>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-3xl mb-2">🫘</div>
+                        <div class="font-bold text-lg">Đậu nành (cơm)</div>
+                        <div class="text-2xl font-bold">25-30 kg</div>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-3xl mb-2">🐟</div>
+                        <div class="font-bold text-lg">Cá/Khoáng</div>
+                        <div class="text-2xl font-bold">10-12 kg</div>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur rounded-xl p-4 text-center">
+                        <div class="text-3xl mb-2">🌿</div>
+                        <div class="font-bold text-lg">Thảo mộc/Khác</div>
+                        <div class="text-2xl font-bold">8-10 kg</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phòng Bệnh Section -->
+    <section id="phongbenh" class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-5xl">💉</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-4">Lịch Tiêm Phòng & Phòng Bệnh</h2>
+                <p class="text-gray-600 mt-2">Phòng bệnh hơn chữa bệnh - Lịch tiêm chuẩn cho gà</p>
+            </div>
+
+            <!-- Lịch tiêm phòng -->
+            <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-6 shadow-lg border border-red-200 mb-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">📅 Lịch Tiêm Phòng Cho Gà</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left bg-white rounded-xl overflow-hidden">
+                        <thead>
+                            <tr class="bg-red-600 text-white">
+                                <th class="p-3">Tuổi</th>
+                                <th class="p-3">Vắc-xin</th>
+                                <th class="p-3">Bệnh Phòng Ngừa</th>
+                                <th class="p-3">Cách Dùng</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700">
+                            <tr class="border-b">
+                                <td class="p-3 font-bold text-red-600">1-2 ngày</td>
+                                <td class="p-3">Marek</td>
+                                <td class="p-3">Bệnh Marek</td>
+                                <td class="p-3">Tiêm dưới da</td>
+                            </tr>
+                            <tr class="border-b bg-red-50">
+                                <td class="p-3 font-bold text-orange-600">5-7 ngày</td>
+                                <td class="p-3">Newcastle (Lasota)</td>
+                                <td class="p-3">Bệnh Gumboro + Newcastle</td>
+                                <td class="p-3">Nhỏ mắt/mỏ</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="p-3 font-bold text-yellow-600">10-12 ngày</td>
+                                <td class="p-3">IB + ND</td>
+                                <td class="p-3">Bệnh Hắt Hơi + Newcastle</td>
+                                <td class="p-3">Nhỏ mắt/mỏ</td>
+                            </tr>
+                            <tr class="border-b bg-red-50">
+                                <td class="p-3 font-bold text-green-600">14-16 ngày</td>
+                                <td class="p-3">Gumboro</td>
+                                <td class="p-3">Bệnh Gumboro (lần 2)</td>
+                                <td class="p-3">Nhỏ nước uống</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="p-3 font-bold text-blue-600">21-24 ngày</td>
+                                <td class="p-3">ND + IB</td>
+                                <td class="p-3">Newcastle + Hắt Hơi (lần 2)</td>
+                                <td class="p-3">Nhỏ nước uống</td>
+                            </tr>
+                            <tr class="border-b bg-red-50">
+                                <td class="p-3 font-bold text-indigo-600">28-30 ngày</td>
+                                <td class="p-3">Fowl Pox</td>
+                                <td class="p-3">Bệnh Đậu Gà</td>
+                                <td class="p-3">Cắm cánh</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="p-3 font-bold text-purple-600">35-40 ngày</td>
+                                <td class="p-3">ND (Lasota)</td>
+                                <td class="p-3">Newcastle (lần 3)</td>
+                                <td class="p-3">Nhỏ nước uống</td>
+                            </tr>
+                            <tr class="bg-green-50">
+                                <td class="p-3 font-bold text-pink-600">60-70 ngày</td>
+                                <td class="p-3">ND + IB + EDS</td>
+                                <td class="p-3">Combo đẻ</td>
+                                <td class="p-3">Tiêm cơ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Các biện pháp phòng bệnh -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-green-50 rounded-xl p-5 border border-green-200">
+                    <div class="text-3xl mb-3">🧹</div>
+                    <h4 class="font-bold text-green-800 text-lg mb-2">Vệ Sinh Chuồng Trại</h4>
+                    <ul class="text-gray-700 text-sm space-y-1">
+                        <li>• Dọn phân hàng ngày</li>
+                        <li>• Phun khử trùng 1 tuần/lần</li>
+                        <li>• Thay đệm lót định kỳ</li>
+                        <li>• Để trống chuồng 7-10 ngày giữa các đàn</li>
+                    </ul>
+                </div>
+                <div class="bg-blue-50 rounded-xl p-5 border border-blue-200">
+                    <div class="text-3xl mb-3">💧</div>
+                    <h4 class="font-bold text-blue-800 text-lg mb-2">Nước Uống Sạch</h4>
+                    <ul class="text-gray-700 text-sm space-y-1">
+                        <li>• Dùng nước sạch, máy lọc nếu cần</li>
+                        <li>• Vệ sinh máng uống hàng ngày</li>
+                        <li>• Pha vitamin vào nước 2-3 lần/tuần</li>
+                        <li>• Khử trùng nước uống định kỳ</li>
+                    </ul>
+                </div>
+                <div class="bg-amber-50 rounded-xl p-5 border border-amber-200">
+                    <div class="text-3xl mb-3">🐛</div>
+                    <h4 class="font-bold text-amber-800 text-lg mb-2">Tẩy Giun Sán</h4>
+                    <ul class="text-gray-700 text-sm space-y-1">
+                        <li>• Tẩy giun lần đầu: 2 tháng tuổi</li>
+                        <li>• Tẩy định kỳ: 3-4 tháng/lần</li>
+                        <li>• Dùng thuốc: Levamisole, Ivermectin</li>
+                        <li>• Cách ly gà mới 7-10 ngày</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Thời gian chiếu sáng cho gà đẻ -->
+            <div class="mt-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-6 text-white">
+                <h3 class="text-2xl font-bold mb-4 text-center">💡 Thời Gian Chiếu Sáng Cho Gà Đẻ</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-bold text-lg mb-3 text-yellow-300">📐 Nguyên Tắc Vàng:</h4>
+                        <ul class="space-y-2">
+                            <li>• Gà đẻ cần <strong class="text-yellow-300">14-16 giờ ánh sáng/ngày</strong></li>
+                            <li>• Không bao giờ GIẢM thời gian chiếu sáng khi đang đẻ</li>
+                            <li>• Có thể TĂNG dần (30 phút/tuần) khi bắt đầu đẻ</li>
+                            <li>• Cường độ sáng: 2-4 W/m² hoặc 10-20 lux</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-3 text-yellow-300">⏱️ Lịch Chiếu Sáng Gợi Ý:</h4>
+                        <div class="bg-white/20 rounded-xl p-4 space-y-2">
+                            <div class="flex justify-between">
+                                <span>18-20 tuần (bắt đầu đè):</span>
+                                <span class="font-bold">13 giờ/ngày</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>21-25 tuần:</span>
+                                <span class="font-bold">14 giờ/ngày</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>26-30 tuần:</span>
+                                <span class="font-bold">15 giờ/ngày</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>31 tuần trở lên:</span>
+                                <span class="font-bold">16 giờ/ngày</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-4 text-center text-blue-200 text-sm">
+                    💡 Dùng đèn LED vàng/trắng, tránh đèn đỏ. Bật đèn thêm vào buổi sáng hoặc chiều tối.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lỗi Gặp Phải Section -->
+    <section id="loi" class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-5xl">⚠️</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-4">Lỗi Bà Con Thường Gặp</h2>
+                <p class="text-gray-600 mt-2">Những sai lầm phổ biến và cách khắc phục</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Lỗi 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border-l-4 border-red-500">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="text-4xl">🌡️</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">1. Quản lý nhiệt độ sai</h4>
+                                <p class="text-gray-600 mt-2"><strong>Sai lầm:</strong> Để gà con quá lạnh hoặc quá nóng, thay đổi đột ngột.</p>
+                                <p class="text-green-600 mt-2"><strong>✓ Khắc phục:</strong> Dùng nhiệt kế kiểm tra, giảm nhiệt độ từ từ 2-3°C/tuần.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lỗi 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border-l-4 border-orange-500">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="text-4xl">💧</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">2. Thiếu nước uống</h4>
+                                <p class="text-gray-600 mt-2"><strong>Sai lầm:</strong> Quên cấp nước hoặc để nước bẩn, thiếu máng uống.</p>
+                                <p class="text-green-600 mt-2"><strong>✓ Khắc phục:</strong> Luôn đủ nước sạch, thay 2-3 lần/ngày, 1 máng/20-30 con.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lỗi 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border-l-4 border-yellow-500">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="text-4xl">🍽️</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">3. Cho ăn không đều đặn</h4>
+                                <p class="text-gray-600 mt-2"><strong>Sai lầm:</strong> Cho ăn tùy tiện, để máng cạn, thức ăn không đủ chất.</p>
+                                <p class="text-green-600 mt-2"><strong>✓ Khắc phục:</strong> Có lịch cố định, đủ 3 bữa/ngày, kiểm tra chất lượng thức ăn.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lỗi 4 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border-l-4 border-blue-500">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="text-4xl">🏠</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">4. Chuồng quá đông</h4>
+                                <p class="text-gray-600 mt-2"><strong>Sai lầm:</strong> Nuôi quá đông để tiết kiệm diện tích.</p>
+                                <p class="text-green-600 mt-2"><strong>✓ Khắc phục:</strong> Tuân thủ mật độ: gà thịt 8-12 con/m², gà đẻ 5-6 con/m².</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lỗi 5 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border-l-4 border-purple-500">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="text-4xl">💉</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">5. Lơ là tiêm phòng</h4>
+                                <p class="text-gray-600 mt-2"><strong>Sai lầm:</strong> Tiêm không đủ, sai lịch, hoặc quên tiêm nhắc lại.</p>
+                                <p class="text-green-600 mt-2"><strong>✓ Khắc phục:</strong> Lên lịch chi tiết, ghi nhật ký, mua vắc-xin ở cơ sở uy tín.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lỗi 6 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border-l-4 border-pink-500">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="text-4xl">🦠</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">6. Không cách ly gà ốm</h4>
+                                <p class="text-gray-600 mt-2"><strong>Sai lầm:</strong> Để gà bệnh chung với đàn, lây lan nhanh.</p>
+                                <p class="text-green-600 mt-2"><strong>✓ Khắc phục:</strong> Cách ly ngay khi phát hiện, chuồng riêng, điều trị riêng.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lỗi 7 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border-l-4 border-green-500">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="text-4xl">💰</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">7. Không tính toán chi phí</h4>
+                                <p class="text-gray-600 mt-2"><strong>Sai lầm:</strong> Nuôi theo cảm tính, không biết điểm hòa vốn.</p>
+                                <p class="text-green-600 mt-2"><strong>✓ Khắc phục:</strong> Tính toán chi tiết, sử dụng công cụ tính bên dưới!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lỗi 8 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border-l-4 border-indigo-500">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="text-4xl">📚</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-800">8. Học hỏi không đủ</h4>
+                                <p class="text-gray-600 mt-2"><strong>Sai lầm:</strong> Nuôi theo kinh nghiệm cũ, không cập nhật kiến thức.</p>
+                                <p class="text-green-600 mt-2"><strong>✓ Khắc phục:</strong> Tham gia hội nhóm, học từ chuyên gia, tham quan mô hình.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chi phí và Lợi nhuận -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-5xl">📊</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-4">Chi Phí & Lợi Nhuận Tham Khảo</h2>
+                <p class="text-gray-600 mt-2">Số liệu cập nhật năm 2024 - Có thể thay đổi theo vùng</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Chi phí nuôi gà thịt -->
+                <div class="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-6 shadow-lg border border-red-200">
+                    <h3 class="text-xl font-bold text-red-700 mb-4 flex items-center gap-2">
+                        <span>🍗</span> Chi Phí Nuôi Gà Thịt (1 con - 8 tuần)
+                    </h3>
+                    <table class="w-full text-sm">
+                        <tbody class="text-gray-700">
+                            <tr class="border-b">
+                                <td class="py-2">• Giống gà (1 con)</td>
+                                <td class="py-2 text-right font-semibold">10.000đ</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2">• Thức ăn (~4.5kg)</td>
+                                <td class="py-2 text-right font-semibold">49.500đ</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2">• Thuốc, vắc-xin</td>
+                                <td class="py-2 text-right font-semibold">5.000đ</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2">• Điện, nước, chi phí khác</td>
+                                <td class="py-2 text-right font-semibold">3.000đ</td>
+                            </tr>
+                            <tr class="bg-red-100 font-bold">
+                                <td class="py-3">TỔNG CHI PHÍ</td>
+                                <td class="py-3 text-right text-red-600 text-lg">67.500đ</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2">• Trọng lượng: 2.2kg × 55.000đ/kg</td>
+                                <td class="py-2 text-right font-semibold text-green-600">121.000đ</td>
+                            </tr>
+                            <tr class="bg-green-100 font-bold text-lg">
+                                <td class="py-3">LỢI NHUẬN</td>
+                                <td class="py-3 text-right text-green-600">53.500đ/con</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-3 text-xs text-gray-500 italic">*Giá tham khảo, thực tế tùy thuộc vào giá thức ăn và giá bán</p>
+                </div>
+
+                <!-- Chi phí nuôi gà đẻ -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 shadow-lg border border-blue-200">
+                    <h3 class="text-xl font-bold text-blue-700 mb-4 flex items-center gap-2">
+                        <span>🥚</span> Chi Phí Nuôi Gà Đẻ (1 con/năm)
+                    </h3>
+                    <table class="w-full text-sm">
+                        <tbody class="text-gray-700">
+                            <tr class="border-b">
+                                <td class="py-2">• Giống gà con</td>
+                                <td class="py-2 text-right font-semibold">15.000đ</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2">• Thức ăn (40kg @ 13.000đ/kg)</td>
+                                <td class="py-2 text-right font-semibold">520.000đ</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2">• Thuốc, vắc-xin</td>
+                                <td class="py-2 text-right font-semibold">15.000đ</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2">• Điện, nước, chi phí khác</td>
+                                <td class="py-2 text-right font-semibold">20.000đ</td>
+                            </tr>
+                            <tr class="bg-blue-100 font-bold">
+                                <td class="py-3">TỔNG CHI PHÍ</td>
+                                <td class="py-3 text-right text-blue-600 text-lg">570.000đ</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2">• 300 trứng × 3.000đ/quả</td>
+                                <td class="py-2 text-right font-semibold text-green-600">900.000đ</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2">• Gà bán thịt: 1.8kg × 35.000đ/kg</td>
+                                <td class="py-2 text-right font-semibold text-green-600">63.000đ</td>
+                            </tr>
+                            <tr class="bg-green-100 font-bold text-lg">
+                                <td class="py-3">LỢI NHUẬN</td>
+                                <td class="py-3 text-right text-green-600">393.000đ/con</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-3 text-xs text-gray-500 italic">*Giá tham khảo, chưa tính chi phí chuồng trại đầu tư ban đầu</p>
+                </div>
+            </div>
+
+            <!-- Gà thả vườn -->
+            <div class="mt-8 bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl p-6 shadow-lg border border-amber-200">
+                <h3 class="text-xl font-bold text-amber-700 mb-4 flex items-center gap-2">
+                    <span>🌿</span> Chi Phí Nuôi Gà Thả Vườn (1 con - 4 tháng)
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <table class="w-full text-sm">
+                        <tbody class="text-gray-700">
+                            <tr class="border-b">
+                                <td class="py-2">• Giống gà</td>
+                                <td class="py-2 text-right font-semibold">12.000đ</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2">• Thức ăn (~6kg)</td>
+                                <td class="py-2 text-right font-semibold">72.000đ</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2">• Thuốc, vắc-xin</td>
+                                <td class="py-2 text-right font-semibold">8.000đ</td>
+                            </tr>
+                            <tr class="border-b bg-amber-100 font-bold">
+                                <td class="py-3">TỔNG CHI PHÍ</td>
+                                <td class="py-3 text-right text-amber-600">92.000đ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="w-full text-sm">
+                        <tbody class="text-gray-700">
+                            <tr class="border-b">
+                                <td class="py-2">• Trọng lượng: 1.8kg</td>
+                                <td class="py-2 text-right"></td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-2">• Giá bán: 100.000đ/kg</td>
+                                <td class="py-2 text-right font-semibold text-green-600">180.000đ</td>
+                            </tr>
+                            <tr class="bg-green-100 font-bold text-lg">
+                                <td class="py-3">LỢI NHUẬN</td>
+                                <td class="py-3 text-right text-green-600">88.000đ/con</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-3 text-sm text-amber-700">💡 Gà thả vườn lợi nhuận cao hơn nhưng thời gian nuôi lâu hơn, cần diện tích chăn thả</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Công cụ tính toán Section -->
+    <section id="tinh" class="py-16 px-4 bg-gradient-to-br from-green-600 to-emerald-700">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12 text-white">
+                <span class="text-5xl">🧮</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-4">Công Cụ Tính Toán Chi Phí</h2>
+                <p class="opacity-90 mt-2">Nhập số liệu, tính toán ngay lợi nhuận dự kiến</p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-2xl p-6 md:p-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Input -->
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                            <span>📝</span> Nhập Thông Tin
+                        </h3>
+                        
+                        <!-- Loại gà -->
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-semibold mb-2">Loại Gà</label>
+                            <select id="loaiGa" onchange="updateCalculator()" class="w-full p-3 border-2 border-gray-200 rounded-xl calculator-input">
+                                <option value="thit">🍗 Gà Thịt (6-8 tuần)</option>
+                                <option value="thavuon">🌿 Gà Thả Vườn (3-4 tháng)</option>
+                                <option value="de">🥚 Gà Đẻ (1 năm)</option>
+                            </select>
+                        </div>
+
+                        <!-- Số lượng -->
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-semibold mb-2">Số Lượng Gà (con)</label>
+                            <input type="number" id="soLuong" value="100" min="1" onchange="updateCalculator()" 
+                                   class="w-full p-3 border-2 border-gray-200 rounded-xl calculator-input text-lg">
+                        </div>
+
+                        <!-- Giá giống -->
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-semibold mb-2">Giá Giống (đ/con)</label>
+                            <input type="number" id="giaGiong" value="10000" min="0" onchange="updateCalculator()" 
+                                   class="w-full p-3 border-2 border-gray-200 rounded-xl calculator-input text-lg">
+                        </div>
+
+                        <!-- Sức ăn -->
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-semibold mb-2">Sức Ăn / 1 Con (kg)</label>
+                            <input type="number" id="sucAn" value="4.5" min="0" step="0.1" onchange="updateCalculator()" 
+                                   class="w-full p-3 border-2 border-gray-200 rounded-xl calculator-input text-lg">
+                        </div>
+
+                        <!-- Giá thức ăn -->
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-semibold mb-2">Giá Thức Ăn (đ/kg)</label>
+                            <input type="number" id="giaThucAn" value="11000" min="0" onchange="updateCalculator()" 
+                                   class="w-full p-3 border-2 border-gray-200 rounded-xl calculator-input text-lg">
+                        </div>
+
+                        <!-- Chi phí thuốc -->
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-semibold mb-2">Chi Phí Thuốc (đ/con)</label>
+                            <input type="number" id="chiPhiThuoc" value="5000" min="0" onchange="updateCalculator()" 
+                                   class="w-full p-3 border-2 border-gray-200 rounded-xl calculator-input text-lg">
+                        </div>
+
+                        <!-- Trọng lượng xuất -->
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-semibold mb-2">Trọng Lượng Xuất (kg/con)</label>
+                            <input type="number" id="trongLuong" value="2.2" min="0" step="0.1" onchange="updateCalculator()" 
+                                   class="w-full p-3 border-2 border-gray-200 rounded-xl calculator-input text-lg">
+                        </div>
+
+                        <!-- Giá bán -->
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-semibold mb-2">Giá Bán (đ/kg)</label>
+                            <input type="number" id="giaBan" value="55000" min="0" onchange="updateCalculator()" 
+                                   class="w-full p-3 border-2 border-gray-200 rounded-xl calculator-input text-lg">
+                        </div>
+
+                        <!-- Chi phí khác -->
+                        <div class="mb-4">
+                            <label class="block text-gray-700 font-semibold mb-2">Chi Phí Khác (đ/con)</label>
+                            <input type="number" id="chiPhiKhac" value="3000" min="0" onchange="updateCalculator()" 
+                                   class="w-full p-3 border-2 border-gray-200 rounded-xl calculator-input text-lg">
+                        </div>
+
+                        <!-- Số trứng (chỉ gà đẻ) -->
+                        <div class="mb-4 hidden" id="trungSection">
+                            <label class="block text-gray-700 font-semibold mb-2">Số Trứng/Năm (quả)</label>
+                            <input type="number" id="soTrung" value="300" min="0" onchange="updateCalculator()" 
+                                   class="w-full p-3 border-2 border-gray-200 rounded-xl calculator-input text-lg">
+                        </div>
+
+                        <div class="mb-4 hidden" id="giaTrungSection">
+                            <label class="block text-gray-700 font-semibold mb-2">Giá Trứng (đ/quả)</label>
+                            <input type="number" id="giaTrung" value="3000" min="0" onchange="updateCalculator()" 
+                                   class="w-full p-3 border-2 border-gray-200 rounded-xl calculator-input text-lg">
+                        </div>
+
+                        <button onclick="resetCalculator()" class="w-full bg-gray-200 text-gray-700 py-3 rounded-xl font-bold hover:bg-gray-300 transition">
+                            🔄 Nhập Lại
+                        </button>
+                    </div>
+
+                    <!-- Result -->
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                            <span>📊</span> Kết Quả Tính Toán
+                        </h3>
+                        
+                        <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-200 mb-6">
+                            <div class="text-center mb-4">
+                                <div class="text-gray-600">Chi Phí Tổng Cộng</div>
+                                <div class="text-4xl font-bold text-red-600" id="tongChi">0đ</div>
+                            </div>
+                            <hr class="border-green-200 my-4">
+                            <div class="space-y-2 text-gray-700">
+                                <div class="flex justify-between">
+                                    <span>• Chi phí giống:</span>
+                                    <span id="chiGiong">0đ</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>• Chi phí thức ăn:</span>
+                                    <span id="chiThucAn">0đ</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>• Chi phí thuốc:</span>
+                                    <span id="chiThuoc">0đ</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>• Chi phí khác:</span>
+                                    <span id="chiKhac">0đ</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-200 mb-6">
+                            <div class="text-center mb-4">
+                                <div class="text-gray-600">Doanh Thu Dự Kiến</div>
+                                <div class="text-4xl font-bold text-blue-600" id="tongThu">0đ</div>
+                            </div>
+                            <hr class="border-blue-200 my-4">
+                            <div class="space-y-2 text-gray-700">
+                                <div class="flex justify-between">
+                                    <span>• Doanh thu thịt:</span>
+                                    <span id="thuThit">0đ</span>
+                                </div>
+                                <div class="flex justify-between hidden" id="thuTrungRow">
+                                    <span>• Doanh thu trứng:</span>
+                                    <span id="thuTrung">0đ</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-yellow-100 to-amber-100 rounded-2xl p-6 border-2 border-yellow-400">
+                            <div class="text-center">
+                                <div class="text-gray-700 text-lg">LỢI NHUẬN DỰ KIẾN</div>
+                                <div class="text-5xl font-bold text-green-600 my-3" id="loiNhuan">0đ</div>
+                                <div class="text-gray-600">Lợi nhuận/con: <span id="loiNhuanCon" class="font-bold text-green-600">0đ</span></div>
+                                <div class="mt-3 p-2 bg-white rounded-lg">
+                                    <span class="text-gray-600">Tỷ suất lợi nhuận: </span>
+                                    <span id="tySuat" class="font-bold text-green-600">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lời khuyên Section -->
+    <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-5xl">💬</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-4">Lời Khuyên Từ Người Nuôi Gà Thực Tế</h2>
+                <p class="text-gray-600 mt-2">Kinh nghiệm xương máu từ 8 năm làm nghề</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-green-500 card-hover transition-all">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h4 class="font-bold text-lg text-gray-800 mb-2">Bắt đầu nhỏ</h4>
+                    <p class="text-gray-600">Đừng đầu tư lớn ngay từ đầu. Bắt đầu với 100-200 con để tích kinh nghiệm rồi mở rộng dần.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-blue-500 card-hover transition-all">
+                    <div class="text-4xl mb-4">📖</div>
+                    <h4 class="font-bold text-lg text-gray-800 mb-2">Ghi chép nhật ký</h4>
+                    <p class="text-gray-600">Ghi lại mọi thứ: số lượng, ăn uống, bệnh, thuốc dùng. Dữ liệu là thầy thuốc tốt nhất.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-amber-500 card-hover transition-all">
+                    <div class="text-4xl mb-4">🏥</div>
+                    <h4 class="font-bold text-lg text-gray-800 mb-2">Phòng hơn chữa</h4>
+                    <p class="text-gray-600">Tiêm phòng đầy đủ, vệ sinh chuồng sạch sẽ. Đừng tiếc tiền phòng bệnh!</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-red-500 card-hover transition-all">
+                    <div class="text-4xl mb-4">💰</div>
+                    <h4 class="font-bold text-lg text-gray-800 mb-2">Tính toán chi tiết</h4>
+                    <p class="text-gray-600">Biết điểm hòa vốn, tính chi phí trên từng con. Đừng nuôi mù quáng!</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-purple-500 card-hover transition-all">
+                    <div class="text-4xl mb-4">🤝</div>
+                    <h4 class="font-bold text-lg text-gray-800 mb-2">Kết nối cộng đồng</h4>
+                    <p class="text-gray-600">Tham gia hội nhóm, học hỏi từ người đi trước. Chia sẻ cũng là cách học hỏi.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg border-t-4 border-pink-500 card-hover transition-all">
+                    <div class="text-4xl mb-4">😌</div>
+                    <h4 class="font-bold text-lg text-gray-800 mb-2">Giữ bình tĩnh</h4>
+                    <p class="text-gray-600">Nuôi gà có lúc được lúc thất. Quan trọng là giữ bình tĩnh, tìm nguyên nhân và giải pháp.</p>
+                </div>
+            </div>
+
+            <!-- Quote -->
+            <div class="mt-12 bg-gradient-to-r from-green-600 to-emerald-500 rounded-2xl p-8 text-white text-center">
+                <div class="text-5xl mb-4">🐔</div>
+                <blockquote class="text-2xl font-medium italic mb-4">
+                    "Nuôi gà là cuộc marathon, không phải cuộc đua nước rút. Kiên trì, học hỏi và không ngừng cải tiến - đó là chìa khóa thành công!"
+                </blockquote>
+                <p class="text-green-200">— Nguyễn Thị Nhã Linh —</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 px-4 bg-gray-800 text-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-5xl">📞</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-4">Liên Hệ Tư Vấn</h2>
+                <p class="text-gray-400 mt-2">Mọi thắc mắc xin liên hệ, tôi luôn sẵn sàng hỗ trợ</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-gray-700 rounded-2xl p-6">
+                    <div class="text-4xl mb-4">📧</div>
+                    <h4 class="font-bold text-lg mb-2">Email</h4>
+                    <p class="text-green-400">ngthinhalinh2009@gmail.com</p>
+                </div>
+                <div class="bg-gray-700 rounded-2xl p-6">
+                    <div class="text-4xl mb-4">📍</div>
+                    <h4 class="font-bold text-lg mb-2">Địa Chỉ</h4>
+                    <p class="text-green-400">Phường II, T.X Ngã Năm<br>TP. Cần Thơ</p>
+                </div>
+                <div class="bg-gray-700 rounded-2xl p-6">
+                    <div class="text-4xl mb-4">💼</div>
+                    <h4 class="font-bold text-lg mb-2">Kinh Nghiệm</h4>
+                    <p class="text-green-400">8 năm trong lĩnh vực<br>chăn nuôi gà</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <div class="text-4xl mb-4">🐣🐔🐓</div>
+            <p class="text-gray-400">© 2024 Tư Vấn Chăn Nuôi Gà - Chuyên Gia Nguyễn Thị Nhã Linh</p>
+            <p class="text-gray-500 mt-2 text-sm">Phường II, T.X Ngã Năm, TP. Cần Thơ | Email: ngthinhalinh2009@gmail.com</p>
+            <div class="mt-4 flex justify-center gap-4">
+                <span class="bg-green-600 px-4 py-2 rounded-full text-sm">Gà Thịt</span>
+                <span class="bg-blue-600 px-4 py-2 rounded-full text-sm">Gà Đẻ</span>
+                <span class="bg-amber-600 px-4 py-2 rounded-full text-sm">Gà Thả Vườn</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button onclick="scrollToTop()" id="backToTop" class="fixed bottom-6 right-6 bg-green-600 text-white w-12 h-12 rounded-full shadow-lg hidden hover:bg-green-700 transition-all z-50">
+        ↑
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+
+        // Back to top button
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('backToTop');
+            if (window.scrollY > 500) {
+                btn.classList.remove('hidden');
+            } else {
+                btn.classList.add('hidden');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Calculator presets
+        const presets = {
+            thit: { giaGiong: 10000, sucAn: 4.5, giaThucAn: 11000, thuoc: 5000, trongLuong: 2.2, giaBan: 55000, khac: 3000 },
+            thavuon: { giaGiong: 12000, sucAn: 6.0, giaThucAn: 12000, thuoc: 8000, trongLuong: 1.8, giaBan: 100000, khac: 5000 },
+            de: { giaGiong: 15000, sucAn: 40, giaThucAn: 13000, thuoc: 15000, trongLuong: 1.8, giaBan: 35000, khac: 20000, soTrung: 300, giaTrung: 3000 }
+        };
+
+        function updateCalculator() {
+            const loaiGa = document.getElementById('loaiGa').value;
+            const soLuong = parseInt(document.getElementById('soLuong').value) || 0;
+            const giaGiong = parseInt(document.getElementById('giaGiong').value) || 0;
+            const sucAn = parseFloat(document.getElementById('sucAn').value) || 0;
+            const giaThucAn = parseInt(document.getElementById('giaThucAn').value) || 0;
+            const chiPhiThuoc = parseInt(document.getElementById('chiPhiThuoc').value) || 0;
+            const trongLuong = parseFloat(document.getElementById('trongLuong').value) || 0;
+            const giaBan = parseInt(document.getElementById('giaBan').value) || 0;
+            const chiPhiKhac = parseInt(document.getElementById('chiPhiKhac').value) || 0;
+
+            // Show/hide trứng section
+            const trungSection = document.getElementById('trungSection');
+            const giaTrungSection = document.getElementById('giaTrungSection');
+            const thuTrungRow = document.getElementById('thuTrungRow');
+
+            if (loaiGa === 'de') {
+                trungSection.classList.remove('hidden');
+                giaTrungSection.classList.remove('hidden');
+                thuTrungRow.classList.remove('hidden');
+            } else {
+                trungSection.classList.add('hidden');
+                giaTrungSection.classList.add('hidden');
+                thuTrungRow.classList.add('hidden');
+            }
+
+            // Calculate
+            const chiGiong = giaGiong * soLuong;
+            const chiThucAn = sucAn * giaThucAn * soLuong;
+            const chiThuoc = chiPhiThuoc * soLuong;
+            const chiKhac = chiPhiKhac * soLuong;
+            const tongChi = chiGiong + chiThucAn + chiThuoc + chiKhac;
+
+            const thuThit = trongLuong * giaBan * soLuong;
+            let thuTrung = 0;
+
+            if (loaiGa === 'de') {
+                const soTrung = parseInt(document.getElementById('soTrung').value) || 0;
+                const giaTrung = parseInt(document.getElementById('giaTrung').value) || 0;
+                thuTrung = soTrung * giaTrung * soLuong;
+                document.getElementById('thuTrung').textContent = formatMoney(thuTrung);
+            }
+
+            const tongThu = thuThit + thuTrung;
+            const loiNhuan = tongThu - tongChi;
+            const loiNhuanMoiCon = soLuong > 0 ? loiNhuan / soLuong : 0;
+            const tySuat = tongChi > 0 ? (loiNhuan / tongChi * 100) : 0;
+
+            // Update display
+            document.getElementById('chiGiong').textContent = formatMoney(chiGiong);
+            document.getElementById('chiThucAn').textContent = formatMoney(chiThucAn);
+            document.getElementById('chiThuoc').textContent = formatMoney(chiThuoc);
+            document.getElementById('chiKhac').textContent = formatMoney(chiKhac);
+            document.getElementById('tongChi').textContent = formatMoney(tongChi);
+
+            document.getElementById('thuThit').textContent = formatMoney(thuThit);
+            document.getElementById('tongThu').textContent = formatMoney(tongThu);
+
+            document.getElementById('loiNhuan').textContent = formatMoney(loiNhuan);
+            document.getElementById('loiNhuanCon').textContent = formatMoney(loiNhuanMoiCon);
+            document.getElementById('tySuat').textContent = tySuat.toFixed(1) + '%';
+
+            // Color coding
+            const loiNhuanEl = document.getElementById('loiNhuan');
+            if (loiNhuan > 0) {
+                loiNhuanEl.classList.remove('text-red-600');
+                loiNhuanEl.classList.add('text-green-600');
+            } else {
+                loiNhuanEl.classList.remove('text-green-600');
+                loiNhuanEl.classList.add('text-red-600');
+            }
+        }
+
+        function formatMoney(amount) {
+            return new Intl.NumberFormat('vi-VN', { 
+                style: 'currency', 
+                currency: 'VND',
+                minimumFractionDigits: 0 
+            }).format(amount);
+        }
+
+        function resetCalculator() {
+            document.getElementById('loaiGa').value = 'thit';
+            document.getElementById('soLuong').value = 100;
+            document.getElementById('giaGiong').value = 10000;
+            document.getElementById('sucAn').value = 4.5;
+            document.getElementById('giaThucAn').value = 11000;
+            document.getElementById('chiPhiThuoc').value = 5000;
+            document.getElementById('trongLuong').value = 2.2;
+            document.getElementById('giaBan').value = 55000;
+            document.getElementById('chiPhiKhac').value = 3000;
+            document.getElementById('soTrung').value = 300;
+            document.getElementById('giaTrung').value = 3000;
+            updateCalculator();
+        }
+
+        // Load preset when changing loaiGa
+        document.getElementById('loaiGa').addEventListener('change', function() {
+            const loaiGa = this.value;
+            const preset = presets[loaiGa];
+            
+            if (preset) {
+                document.getElementById('giaGiong').value = preset.giaGiong;
+                document.getElementById('sucAn').value = preset.sucAn;
+                document.getElementById('giaThucAn').value = preset.giaThucAn;
+                document.getElementById('chiPhiThuoc').value = preset.thuoc;
+                document.getElementById('trongLuong').value = preset.trongLuong;
+                document.getElementById('giaBan').value = preset.giaBan;
+                document.getElementById('chiPhiKhac').value = preset.khac;
+                
+                if (loaiGa === 'de') {
+                    document.getElementById('soTrung').value = preset.soTrung;
+                    document.getElementById('giaTrung').value = preset.giaTrung;
+                }
+            }
+            updateCalculator();
+        });
+
+        // Initialize calculator
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCalculator();
+        });
+    </script>
+</body>
+</html>
